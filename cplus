@@ -1,0 +1,23 @@
+echo ""
+echo "/*********** $1.cpp ***************/"
+
+PROGRAM=$1
+
+
+g++ -o $PROGRAM $PROGRAM.cpp
+
+cp -rf input $PROGRAM.in
+
+
+./$PROGRAM < $PROGRAM.in > $PROGRAM.out
+
+cp $PROGRAM.out output
+
+echo ""
+echo "Input:"
+cat $PROGRAM.in
+
+echo ""
+echo "Output:"
+cat $PROGRAM.out
+echo ""
